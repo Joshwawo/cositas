@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+:root {
+    --font: 'Roboto Mono', monospace;
+    --color-primary: #a7c957;
+    --color-primary2: #a7c957;
+    --color-nav: #6a994e;
+    --color-nav-hover: #f2e8cf;
+    --color-cosa1: #ad1818;
+    --color-cosa2: #d4d117;
+    --color-cosa3: #140b91;
+    --dark: #0c0d0d;
+    --amarillo: #f5cd03;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: #001219;
+    font-size: 62.5%;
+    /* 1 rem = 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+
+}
+
+/* ?bio*/
+.bio__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 25rem; */
+    width: 80%;
+    height: 100%;
+    background-color: var(--dark);
+    color: #f7f7f7;
+    padding: 1rem;
+    margin: 0 auto;
+    font-family: var(--font);
+    border-radius: 0.5rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.bio__img {
+    max-width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.bio__text {}
+
+.bio__text--h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+}
+
+.bio__text--p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+
+/* ?bio */
+
+
+
+.container-global {
+    /* width: min(90%, 120rem); */
+    margin: 0 auto;
+    padding: 1rem 1rem;
+
+
+
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "bio nav-bar nav-bar"
+        "bio cosa1 cosa2"
+        "bio cosa1 cosa3";
+}
+
+.bio {
+    grid-area: bio;
+    background-color: var(--color-primary);
+    padding: 4rem 4rem;
+
+
+}
+
+.nav-bar {
+    grid-area: nav-bar;
+    background-color: var(--color-primary2);
+
+
+
+}
+
+.cosa1 {
+    grid-area: cosa1;
+    background-color: var(--color-primary);
+}
+
+.cosa2 {
+    grid-area: cosa2;
+    background-color: var(--color-primary);
+}
+
+.cosa3 {
+    grid-area: cosa3;
+    background-color: var(--color-primary);
+}
+
+/*! Nav-Bar  */
+
+.nav-bar__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    color: #f7f7f7;
+    padding: 1rem;
+    margin: 0 auto;
+    font-family: var(--font);
+    border-radius: 0.5rem;
+
+}
+
+.nav-bar__item {
+    padding-top: 1rem;
+}
+
+.nav-bar__item--a {
+
+    color: #f7f7f7;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    /* text-underline-offset: 0.5rem; */
+    text-underline-offset: 0.9rem;
+    text-transform: uppercase;
+
+}
+
+.nav-bar__item--a:hover {
+    background-color: var(--color-nav-hover);
+    font-size: 2rem;
+    color: #a1be5b;
+    text-decoration: overline;
+}
+
+/*! Fin Nav-Bar */
+
+
+/*! Footer */
