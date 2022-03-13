@@ -11,6 +11,8 @@
     --color-cosa3: #cfe1b9;
     --dark: #0c0d0d;
     --amarillo: #f5cd03;
+    --espaniol: #3d10b8;
+    --english: #e02b95;
     --html: orange;
     --css: blue;
     --js: yellow;
@@ -24,6 +26,8 @@
     --fill-size-php: -90%;
     --fill-size-git: -85%;
     --fill-size-java: -60%;
+    --fill-size-espaniol: -0%;
+    --fill-size-english: -65%;
     --bar-color: pink;
 
 }
@@ -33,6 +37,8 @@ html {
     /* background-color: #001219; */
     font-size: 62.5%;
     /* 1 rem = 10px */
+    font-family: var(--font);
+
 }
 
 *, *:before, *:after {
@@ -44,6 +50,17 @@ img {
 
 }
 
+h2::selection{
+    background-color: var(--amarillo);
+    color: var(--dark);
+}
+h1::selection{
+    background-color: var(--amarillo);
+    color: var(--dark);
+}
+
+
+
 .container-global {
     /* width: min(90%, 120rem); */
     margin: 0 auto;
@@ -53,6 +70,9 @@ img {
 
 }
 
+.text-align-center {
+    text-align: center;
+}
 
 /* ?bio*/
 .bio__card {
@@ -246,7 +266,7 @@ img {
 }
 
 .cosa1__contenedor__tittle {
-    text-align: center;
+    text-align: justify;
 }
 
 .cosa1__contenedor__svg {
@@ -443,4 +463,147 @@ img {
 
 }
 
-/*! Footer */
+/** FIN Barras de Habilidades */
+
+/** INCIO COSA 2   */
+.cosa2__contenedor {
+    margin: 0 auto;
+    max-width: 640px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cosa2__barras {
+
+    display: flex;
+    flex-direction: column;
+
+
+
+
+}
+
+.cosa2__languajes {
+    display: flex;
+    flex-direction: row-r;
+    justify-content: space-around;
+    /* align-items: stretch; */
+}
+
+.cosa2__languajesLevel {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4rem;
+}
+
+.cosa2__barras--espanol {
+    position: relative;
+    width: 300px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.cosa2__barras--espanol::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--espaniol);
+    transform: translateX(-100%);
+    animation: fill-bar-espanol 1.5s 0.3s ease-in-out forwards;
+}
+
+
+@keyframes fill-bar-espanol {
+    to {
+        transform: translateX(var(--fill-size-espaniol));
+    }
+
+}
+
+.cosa2__barras--english {
+    position: relative;
+    width: 300px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.cosa2__barras--english::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--english);
+    transform: translateX(-100%);
+    animation: fill-bar-english 0.8s 0.3s ease-in-out forwards;
+}
+
+.cosa2__barras--english::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--english);
+    transform: translateX(-100%);
+    animation: fill-bar-english 0.8s 0.3s ease-in-out forwards;
+}
+
+@keyframes fill-bar-english {
+    to {
+        transform: translateX(var(--fill-size-english));
+    }
+
+}
+
+/**FIN COSAS 2  */
+
+/**Incio Mi contact Info  */
+.cosa3__container{
+    margin: 0 auto;
+    max-width: 640px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cosa3__h2{
+    
+    font-weight: bold;
+    padding-bottom: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cosa3__contact-info{
+    /* font-size: 1.3rem;
+    font-weight: bold; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    margin: 0 auto;
+    padding: 1rem;
+
+    
+    
+}
+.cosa3__contact-info a{
+    /* padding-top: 1rem; */
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1rem 1rem 1rem -1rem; ;
+    margin: 1rem; 
+    color: #0c0d0d;
+    
+}
+
+
+/* *Fin mi contacto info */
