@@ -11,6 +11,21 @@
     --color-cosa3: #cfe1b9;
     --dark: #0c0d0d;
     --amarillo: #f5cd03;
+    --html: orange;
+    --css: blue;
+    --js: yellow;
+    --php: green;
+    --git: red;
+    --java: purple;
+    --fill-size: -20%;
+    /* --fill-size-html: -60%; */
+    --fill-size-css: -40%;
+    --fill-size-js: -85%;
+    --fill-size-php: -90%;
+    --fill-size-git: -85%;
+    --fill-size-java: -60%;
+    --bar-color: pink;
+
 }
 
 html {
@@ -211,7 +226,7 @@ img {
 /*! Fin Nav-Bar */
 
 /**Cosa1  */
-.cosa1__contenedor{
+.cosa1__contenedor {
     /* display: flex;
     flex-direction: column;
     justify-content: center;
@@ -220,7 +235,7 @@ img {
     max-height: 100%;
     background-color: var(--color-cosa1);
     color: #f7f7f7; */
-    
+
     max-width: 640px;
     max-height: 146px;
     padding: 1rem;
@@ -230,11 +245,11 @@ img {
     /* box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.5); */
 }
 
-.cosa1__contenedor__tittle{
+.cosa1__contenedor__tittle {
     text-align: center;
 }
 
-.cosa1__contenedor__svg{
+.cosa1__contenedor__svg {
 
     display: flex;
     justify-content: space-around;
@@ -248,20 +263,184 @@ img {
     font-family: var(--font);
     border-radius: .3rem;
     box-shadow: 1rem 1rem 1rem 1rem rgba(187, 181, 181, 0.5);
-    
+
     /* display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto; */
 }
 
-.cosa1__contenedor__svg:hover{
-    background-color: orange;
-    color: #f7f7f7;
-    
+/**Barras de Habilidades */
+.cosa1__barras {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
-.cosa1__contenedor__svg--bar{
-  
+
+.progress-bar {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--html);
+    /* transform: translateX(-100%); */
+    /* animation: fill-bar 0.8s 0.3s ease-in-out forwards; */
+    transform: translateX(-100%);
+    animation: fill-bar 0.8s 0.3s ease-in-out forwards;
+
+}
+
+@keyframes fill-bar {
+    to {
+        transform: translate(var(--fill-size));
+    }
+
+}
+
+
+.progress-bar--css {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar--css::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--css);
+    transform: translateX(-100%);
+    animation: fill-bar-css 0.8s 0.3s ease-in-out forwards;
+
+}
+
+
+@keyframes fill-bar-css {
+    to {
+        transform: translateX(var(--fill-size-css));
+    }
+
+}
+
+.progess-bar--js {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progess-bar--js::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--js);
+    transform: translateX(-100%);
+    animation: fill-bar-js 0.8s 0.3s ease-in-out forwards;
+
+}
+
+@keyframes fill-bar-js {
+    to {
+        transform: translateX(var(--fill-size-js));
+    }
+
+}
+
+.progress-bar--php {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar--php::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--php);
+    transform: translateX(-100%);
+    animation: fill-bar-php 0.8s 0.3s ease-in-out forwards;
+
+}
+
+@keyframes fill-bar-php {
+    to {
+        transform: translateX(var(--fill-size-php));
+    }
+
+}
+
+.progress-bar--git {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar--git::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--git);
+    transform: translateX(-100%);
+    animation: fill-bar-git 0.8s 0.3s ease-in-out forwards;
+
+}
+
+@keyframes fill-bar-git {
+    to {
+        transform: translateX(var(--fill-size-git));
+    }
+
+}
+
+.progress-bar--java {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.progress-bar--java::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--java);
+    transform: translateX(-100%);
+    animation: fill-bar-java 0.8s 0.3s ease-in-out forwards;
+
+}
+
+@keyframes fill-bar-java {
+    to {
+        transform: translateX(var(--fill-size-java));
+    }
+
 }
 
 /*! Footer */
